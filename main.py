@@ -16,7 +16,7 @@ customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue") 
 #creates the window 
 win = customtkinter.CTk()
-win.geometry("1920x1080")
+win.geometry("300x400")
 win.title('Scouting Application')
 def get_alliance_color(alliances,team_key):
     for i in range(len(alliances.blue.team_keys)):
@@ -94,17 +94,6 @@ class window():
         table.set_fontsize(25)
         table.scale(1.5, 1.5)
         plt.show()
-        # print(self.rows)
-        # for i in range(len(self.fields)):
-        #     self.entry_feilds = customtkinter.CTkEntry(win,width=185,font=('Arial',16,'bold'))
-        #     self.entry_feilds.insert(END,self.fields[i])
-        #     self.entry_feilds.place(x=250+(i*185),y=0)
-        # for i in range(len(self.rows)):
-        #     for j in range(len(self.rows[i])):
-        #         self.e = customtkinter.CTkEntry(win, width=185,
-        #                        font=('Arial',16,'bold'))              
-        #         self.e.insert(END, self.rows[i][j])
-        #         self.e.place(x=250+(j*185),y=30+(i*30))
 
     def generate_csv(self):
         self.generate_data()
