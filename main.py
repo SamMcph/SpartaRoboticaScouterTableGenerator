@@ -5,11 +5,13 @@ import time
 import tbaapiv3client
 from pprint import pprint
 import matplotlib.pyplot as plt 
-
+import json 
 from tkinter import *
 import customtkinter
 from tkinter import StringVar
-api_key = 'lvmktWXPvzWVrD5kDjT2cAIxOpifCRhe1QnXOjjErJ5sDppradbmh0mO5NOhNIxt'
+f = open('key.json')
+data = json.load(f)
+api_key = data["key"]
 customtkinter.set_appearance_mode("dark") 
 customtkinter.set_default_color_theme("blue") 
 #creates the window 
@@ -88,8 +90,8 @@ class window():
             colLabels = self.fields,
             colColours =["palegreen"] * 6,
             cellLoc ='center',  
-            loc ='upper left')
-        table.set_fontsize(30)
+            loc ='center')
+        table.set_fontsize(25)
         table.scale(1.5, 1.5)
         plt.show()
         # print(self.rows)
